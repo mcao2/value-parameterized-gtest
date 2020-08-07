@@ -1,0 +1,8 @@
+Foo:
+  # Read-oriented API tests
+  GetBarTest:
+    - case_name: TestEmptyParams
+      case_assertion: EXPECT_EQ
+      case_description: "Test if right value returned when no arg is given"
+      case_params: []
+      case_expected_result: ["hello", "world"]
