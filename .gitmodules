@@ -1,6 +1,0 @@
-[submodule "dep/yaml-cpp"]
-	path = dep/yaml-cpp
-	url = https://github.com/jbeder/yaml-cpp.git
-[submodule "dep/googletest"]
-	path = dep/googletest
-	url = https://github.com/google/googletest.git
