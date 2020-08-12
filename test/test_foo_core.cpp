@@ -1,9 +1,11 @@
 #include "test_foo_core.h"
 
-const char* TEST_FOO_CONFIG_PATH = std::getenv("TEST_FOO_CONFIG_PATH");
+#include <memory>
 
-std::unique_ptr<YAML::Node> config_ptr_ =
-    std::make_unique<YAML::Node>(YAML::LoadFile(TEST_FOO_CONFIG_PATH));
+const char* TEST_SRCDIR = std::getenv("TEST_SRCDIR");
+
+std::unique_ptr<YAML::Node> config_ptr_ = std::make_unique<YAML::Node>(
+    YAML::LoadFile(std::string(TEST_SRCDIR) + "/__main__/test/test_foo.yaml"));
 
 void FooTest::SetUp() {
   config = GetParam();

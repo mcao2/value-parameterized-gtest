@@ -6,8 +6,9 @@
 
 #include <cassert>
 #include <string>
+#include <vector>
 
-#include "foo.h"
+#include "src/foo.h"
 
 std::vector<YAML::Node> ReadTestCasesFromYaml(const std::string& test_name);
 
